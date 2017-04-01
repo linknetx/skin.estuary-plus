@@ -1,0 +1,30 @@
+# Auto detect text files and perform CRLF normalization
+* text eol=crlf
+
+# Perform CRLF normalization
+* txt  eol=crlf
+* po   eol=crlf
+* xml  eol=crlf
+* xsp  eol=crlf
+
+# Do not change these files
+* jpg  binary
+* png  binary
+* ttf  binary
+* xbt  binary
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+
+# Standard to msysgit
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
+
