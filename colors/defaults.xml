@@ -11,7 +11,10 @@
 	<color name="grey">FFA0A0A0</color>
 	<color name="blue">FF7ACAFE</color>
 	<color name="red">FFCE4421</color>
+	<color name="red_bright">FFFF5429</color>
 	<color name="button_focus">FF12A0C7</color>
+	<color name="text_mediumlight">FF14B6E3</color>
+	<color name="text_highlight">FF17CDFF</color>
 	<color name="text_shadow">22000000</color>
 	<color name="border_alpha">60FFFFFF</color>
 	<color name="disabled">40FFFFFF</color>

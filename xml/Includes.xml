@@ -108,14 +108,15 @@
 			</control>
 		</definition>
 	</include>
+
 	<include name="InfoList">
-		<param name="item_label">$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Label]</param>
+	  <param name="item_label">$INFO[ListItem.Year,[COLOR text_highlight],: [/COLOR]]$INFO[ListItem.Label]</param>
 		<param name="path">$VAR[InfoListPathVar]</param>
-		<param name="item_height">40</param>
+		<param name="item_height">50</param>
 		<param name="bottom">100</param>
 		<param name="width">1152</param>
 		<param name="list_id">5000</param>
-		<param name="font">font13</param>
+		<param name="font">font14</param>
 		<param name="sortby"></param>
 		<param name="sortorder">ascending</param>
 		<param name="visible">true</param>
@@ -152,6 +153,52 @@
 			</control>
 		</definition>
 	</include>
+
+	<include name="InfoListVertical">
+		<param name="item_label">$INFO[ListItem.Year,[COLOR text_highlight],:[/COLOR][CR]]$INFO[ListItem.Label]</param>
+		<param name="path">$VAR[InfoListPathVar]</param>
+		<param name="item_height">100</param>
+		<param name="bottom">100</param>
+		<param name="width">1152</param>
+		<param name="list_id">5000</param>
+		<param name="font">font14</param>
+		<param name="sortby"></param>
+		<param name="sortorder">ascending</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="panel" id="$PARAM[list_id]">
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<bottom>$PARAM[bottom]</bottom>
+				<orientation>vertical</orientation>
+				<visible>$PARAM[visible]</visible>
+				<focusedlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>10</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</focusedlayout>
+				<itemlayout height="$PARAM[item_height]" width="$PARAM[width]">
+					<control type="label">
+						<left>10</left>
+						<height>$PARAM[item_height]</height>
+						<width>$PARAM[width]</width>
+						<aligny>center</aligny>
+						<label>$PARAM[item_label]</label>
+						<shadowcolor>text_shadow</shadowcolor>
+						<font>$PARAM[font]</font>
+					</control>
+				</itemlayout>
+				<content sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]">$PARAM[path]</content>
+			</control>
+		</definition>
+	</include>
+
 	<include name="AudioDSPModeList">
 		<control type="label">
 			<left>10</left>
@@ -162,7 +209,7 @@
 			<label>$PARAM[sublabel]</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>button_focus</textcolor>
+			<textcolor>text_highlight</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="image">
@@ -272,7 +319,7 @@
 				<height>40</height>
 				<aligny>center</aligny>
 				<label>$PARAM[label]:</label>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 			</control>
 			<control type="label">
 				<width>auto</width>
@@ -411,9 +458,6 @@
 				<param name="texture" value="$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.AudioCodec)" />
 			</include>
-			<!-- 			<include content="MediaFlag">
-																						<param name="texture" value="$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]" />
-																					</include> -->
 			<include content="MediaFlag">
 				<param name="texture" value="$VAR[ResolutionFlagVar]" />
 				<param name="visible" value="!String.IsEmpty(ListItem.VideoResolution)" />
@@ -434,7 +478,7 @@
 				<top>68</top>
 				<width>160</width>
 				<height>63</height>
-				<font>font27_narrow</font>
+				<font>font25_narrow_bold</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[$PARAM[label]]</label>
@@ -656,6 +700,7 @@
 				</control>
 				<control type="label" id="$PARAM[id]">
 					<label>$PARAM[sub_label]</label>
+					<font>font37</font>
 					<left>85</left>
 					<shadowcolor>text_shadow</shadowcolor>
 					<align>center</align>

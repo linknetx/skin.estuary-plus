@@ -24,7 +24,7 @@
 			<height>49</height>
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
-			<font>font12</font>
+			<font>font10_bold</font>
 			<texturefocus />
 			<texturenofocus />
 			<onclick>noop</onclick>
@@ -84,7 +84,7 @@
 		<font>font12</font>
 		<textoffsetx>30</textoffsetx>
 		<textoffsety>10</textoffsety>
-		<textcolor>button_focus</textcolor>
+		<textcolor>text_highlight</textcolor>
 	</include>
 	<include name="DefaultDialogButton">
 		<param name="width">300</param>

@@ -48,6 +48,7 @@
 						<top>240</top>
 						<width>525</width>
 						<bottom>100</bottom>
+						<font>font14</font>
 						<visible>!ListItem.IsCollection</visible>
 						<label>$INFO[ListItem.Tagline,[I],[/I][CR][CR]]$INFO[ListItem.Plot][CR][CR]</label>
 						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(autoscroll)</autoscroll>
@@ -59,7 +60,7 @@
 						<height>413</height>
 						<align>center</align>
 						<aligny>center</aligny>
-						<font>font27</font>
+						<font>font14</font>
 						<textcolor>80FFFFFF</textcolor>
 						<label>$LOCALIZE[19055]</label>
 						<visible>String.IsEmpty(Listitem.Plot) + String.IsEmpty(Listitem.Tagline) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
@@ -68,12 +69,12 @@
 						<left>20</left>
 						<top>245</top>
 						<visible>ListItem.IsCollection</visible>
-						<include content="InfoList">
+						<include content="InfoListVertical">
 							<param name="bottom" value="108" />
 							<param name="width" value="540" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
-							<param name="font" value="font13" />
+							<param name="font" value="font14" />
 						</include>
 					</control>
 				</control>

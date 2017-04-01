@@ -103,7 +103,7 @@
 				<label></label>
 				<textoffsetx>40</textoffsetx>
 				<textoffsety>20</textoffsety>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<aligny>bottom</aligny>
 			</control>

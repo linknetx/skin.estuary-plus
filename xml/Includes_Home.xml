@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<include name="HomeScreenScrollbar">
+		<control type="scrollbar" id="$PARAM[id]">
+			<right>0</right>
+			<top>list_y_offset</top>
+			<width>12</width>
+			<bottom>list_y_offset</bottom>
+			<texturesliderbackground colordiffuse="FF222222">colors/white.png</texturesliderbackground>
+			<onleft>$PARAM[onunfocus_id]</onleft>
+			<onright>$PARAM[onunfocus_id]</onright>
+			<orientation>vertical</orientation>
+			<animation effect="fade" start="100" end="50" time="300" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+		</control>
+	</include>
+	<include name="HomeScreenScrollbarOffset">
+		<right>6</right>
+	</include>
 	<include name="WidgetGroupListCommon">
 		<orientation>vertical</orientation>
 		<height>100%</height>
@@ -71,6 +88,7 @@
 				<param name="posy" value="250"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>115</top>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
@@ -184,6 +202,7 @@
 				<param name="posy" value="200"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>105</top>
 				<right>0</right>
@@ -245,6 +264,7 @@
 				<param name="posy" value="220"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
@@ -306,6 +326,7 @@
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
@@ -484,6 +505,7 @@
 				<param name="posy" value="200"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
+				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
@@ -827,8 +849,8 @@
 	</include>
 	<include name="WeatherHourlyItem">
 		<item>
-			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
-			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)] ∙ $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)]</label2>
+			<label>[B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)][/B]</label>
+			<label2>[B]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)] ∙ $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)][/B]</label2>
 			<property name="Temperature">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
@@ -841,8 +863,8 @@
 	</include>
 	<include name="WeatherDailyItem">
 		<item>
-			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)]</label>
-			<label2>[COLOR blue]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] ∙ [COLOR red]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label>[B]$INFO[Window(weather).Property(Daily.$PARAM[item_index].ShortDay)][/B]</label>
+			<label2>[B][COLOR blue]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] ∙ [COLOR red_bright]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR][/B]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>

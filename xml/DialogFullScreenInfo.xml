@@ -21,40 +21,145 @@
 			<control type="group">
 				<animation effect="slide" end="0,-80" time="150" condition="PVR.IsTimeShift">conditional</animation>
 				<control type="image">
-					<depth>DepthOSD+</depth>
 					<left>10</left>
-					<top>-490</top>
-					<width>400</width>
-					<height>600</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideo.png" background="true">$VAR[NowPlayingPosterVar]</texture>
+					<top>-190</top>
+					<width>300</width>
+					<height>300</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
 					<bordertexture border="21">overlays/shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<include>OpenClose_Left</include>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>-190</top>
+					<width>460</width>
+					<height>300</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<include>OpenClose_Left</include>
+					<visible>!VideoPlayer.Content(livetv) + !VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<left>15</left>
+					<top>-190</top>
+					<width>300</width>
+					<height>300</height>
+					<texture>dialogs/dialog-bg-nobo.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<include>OpenClose_Left</include>
+					<visible>VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>10</left>
+					<top>-190</top>
+					<width>300</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoTV.png" background="true">$VAR[NowPlayingPosterVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<include>OpenClose_Left</include>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>40</left>
+					<top>-160</top>
+					<width>410</width>
+					<height>240</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoWide.png" background="true">$VAR[NowPlayingPosterVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<include>OpenClose_Left</include>
+					<visible>!VideoPlayer.Content(livetv) + !VideoPlayer.Content(movies)</visible>
+				</control>
+				<control type="image">
+					<depth>DepthOSD+</depth>
+					<left>15</left>
+					<top>-190</top>
+					<width>300</width>
+					<height>300</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture fallback="DefaultVideoMovies.png" background="true">$VAR[NowPlayingPosterVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
+					<include>OpenClose_Left</include>
+					<visible>VideoPlayer.Content(movies)</visible>
 				</control>
 				<control type="group">
 					<include>OpenClose_Right</include>
 					<control type="image">
-						<left>400</left>
-						<top>-240</top>
+						<left>300</left>
+						<top>-190</top>
 						<right>20</right>
-						<height>350</height>
+						<height>300</height>
 						<texture>dialogs/dialog-bg-nobo.png</texture>
 						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<bordersize>20</bordersize>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
+					<control type="image">
+						<left>470</left>
+						<top>-190</top>
+						<right>20</right>
+						<height>300</height>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>!VideoPlayer.Content(livetv) + !VideoPlayer.Content(movies)</visible>
+					</control>
+					<control type="image">
+						<left>310</left>
+						<top>-190</top>
+						<right>20</right>
+						<height>300</height>
+						<texture>dialogs/dialog-bg-nobo.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<visible>VideoPlayer.Content(movies)</visible>
 					</control>
 					<control type="textbox">
-						<left>443</left>
-						<top>-207</top>
+						<left>343</left>
+						<top>-157</top>
 						<right>80</right>
-						<height>290</height>
+						<height>240</height>
+						<font>font14</font>
 						<label fallback="416">$VAR[FullScreenInfoTextBoxVar]</label>
 						<align>justify</align>
 						<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+						<visible>VideoPlayer.Content(livetv)</visible>
+					</control>
+					<control type="textbox">
+						<left>513</left>
+						<top>-157</top>
+						<right>80</right>
+						<height>240</height>
+						<font>font14</font>
+						<label fallback="416">$VAR[FullScreenInfoTextBoxVar]</label>
+						<align>justify</align>
+						<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+						<visible>!VideoPlayer.Content(livetv) + !VideoPlayer.Content(movies)</visible>
+					</control>
+					<control type="textbox">
+						<left>353</left>
+						<top>-157</top>
+						<right>80</right>
+						<height>240</height>
+						<font>font14</font>
+						<label fallback="416">$VAR[FullScreenInfoTextBoxVar]</label>
+						<align>justify</align>
+						<autoscroll delay="5000" repeat="7500" time="5000"></autoscroll>
+						<visible>VideoPlayer.Content(movies)</visible>
 					</control>
 					<control type="grouplist" id="5550">
 						<right>20</right>
-						<top>-310</top>
+						<top>-260</top>
 						<width>1000</width>
 						<height>100</height>
 						<align>right</align>

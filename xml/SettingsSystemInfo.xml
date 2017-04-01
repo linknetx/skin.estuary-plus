@@ -192,7 +192,7 @@
 						<textoffsety>10</textoffsety>
 						<font>font12</font>
 						<width>auto</width>
-						<textcolor>button_focus</textcolor>
+						<textcolor>text_highlight</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>
@@ -215,7 +215,7 @@
 						<description>Kodi Build Date</description>
 						<width>auto</width>
 						<font>font12</font>
-						<textcolor>button_focus</textcolor>
+						<textcolor>text_highlight</textcolor>
 						<shadowcolor>black</shadowcolor>
 					</control>
 				</control>

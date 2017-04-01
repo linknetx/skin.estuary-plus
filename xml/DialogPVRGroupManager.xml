@@ -77,7 +77,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>font12</font>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 				</control>
 				<control type="image">
 					<left>0</left>

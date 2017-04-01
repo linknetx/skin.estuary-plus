@@ -25,7 +25,7 @@
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>font14</font>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 			</control>
 			<control type="label" id="12">
 				<description>Slider Value</description>

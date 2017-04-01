@@ -44,6 +44,7 @@
 					<right>50</right>
 					<top>769</top>
 					<bottom>105</bottom>
+					<font>font14</font>
 					<label>$INFO[ListItem.Plot]</label>
 					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -66,7 +67,7 @@
 						<param name="width" value="1000" />
 						<param name="sortby" value="year" />
 						<param name="sortorder" value="descending" />
-						<param name="font" value="font13" />
+						<param name="font" value="font14" />
 					</include>
 				</control>
 			</control>

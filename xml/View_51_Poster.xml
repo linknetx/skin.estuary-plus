@@ -42,7 +42,7 @@
 					<onup>9000</onup>
 					<ondown>5199</ondown>
 					<onright>51</onright>
-					<hitrect x="100" y="0" w="800" h="400" />
+					<hitrect x="100" y="0" w="490" h="750"/>
 					<visible>Container.Content(movies) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					<preloaditems>1</preloaditems>
 					<viewtype label="20021">icon</viewtype>
@@ -85,14 +85,14 @@
 							<param name="bottom" value="0" />
 							<param name="sortby" value="year" />
 							<param name="sortorder" value="descending" />
-							<param name="font" value="font13" />
+							<param name="font" value="font14" />
 						</include>
 					</control>
 					<control type="image">
 						<left>645</left>
 						<top>415</top>
-						<width>32</width>
-						<height>32</height>
+						<width>40</width>
+						<height>40</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 					</control>
 					<control type="label">
@@ -109,6 +109,7 @@
 						<top>480</top>
 						<height>250</height>
 						<right>115</right>
+						<font>font14</font>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 						<label>$INFO[ListItem.Plot]</label>
 						<shadowcolor>text_shadow</shadowcolor>

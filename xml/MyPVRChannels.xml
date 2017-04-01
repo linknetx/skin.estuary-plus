@@ -15,7 +15,7 @@
 					<top>list_y_offset</top>
 					<right>918</right>
 					<bottom>list_y_offset</bottom>
-					<movement>3</movement>
+					<movement>4</movement>
 					<focusposition>5</focusposition>
 					<scrolltime tween="cubic" easing="out">500</scrolltime>
 					<orientation>vertical</orientation>
@@ -26,7 +26,7 @@
 					<viewtype label="List">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>60</pagecontrol>
-					<focusedlayout height="90" width="tvchannelslist_width">
+					<focusedlayout height="100" width="tvchannelslist_width">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -38,14 +38,14 @@
 						<control type="image">
 							<right>20</right>
 							<top>10</top>
-							<width>80</width>
-							<height>70</height>
+							<width>92</width>
+							<height>80</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
+							<top>64</top>
 							<width>50</width>
 							<height>12</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
@@ -53,30 +53,30 @@
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>110</right>
-							<top>25</top>
-							<width>40</width>
-							<height>40</height>
+							<right>126</right>
+							<top>28</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
 						<control type="label">
 							<left>105</left>
-							<top>8</top>
+							<top>2</top>
 							<height>90</height>
-							<right>120</right>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font14</font>
-							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+							<font>font37</font>
+							<animation effect="slide" start="0,0" end="0,17" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
-							<top>46</top>
+							<top>48</top>
 							<height>90</height>
-							<right>120</right>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font12</font>
+							<font>font13</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
@@ -92,18 +92,18 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="90" width="tvchannelslist_width">
+					<itemlayout height="100" width="tvchannelslist_width">
 						<control type="image">
 							<right>20</right>
 							<top>10</top>
-							<width>80</width>
-							<height>70</height>
+							<width>92</width>
+							<height>80</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
+							<top>64</top>
 							<width>50</width>
 							<height>12</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
@@ -111,30 +111,30 @@
 							<info>ListItem.Progress</info>
 						</control>
 						<control type="image">
-							<right>110</right>
-							<top>25</top>
-							<width>40</width>
-							<height>40</height>
+							<right>126</right>
+							<top>28</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
 						<control type="label">
 							<left>105</left>
-							<top>8</top>
+							<top>2</top>
 							<height>90</height>
-							<right>120</right>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font14</font>
+							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
-							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,17" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
 							<left>165</left>
-							<top>46</top>
+							<top>48</top>
 							<height>90</height>
-							<right>120</right>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font12</font>
+							<font>font13</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<textcolor>grey</textcolor>
@@ -299,10 +299,10 @@
 				</control>
 				<control type="group">
 					<left>0</left>
-					<top>202</top>
+					<top>260</top>
 					<control type="progress">
 						<top>125</top>
-						<width>520</width>
+						<width>600</width>
 						<height>12</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>
@@ -310,58 +310,60 @@
 					</control>
 					<control type="label">
 						<top>82</top>
-						<width>560</width>
+						<width>600</width>
 						<height>262</height>
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
 					<control type="label">
 						<top>82</top>
-						<width>520</width>
+						<width>600</width>
 						<height>262</height>
 						<align>right</align>
 						<label>$INFO[ListItem.EndTime]</label>
 					</control>
 					<control type="label">
 						<top>-80</top>
-						<width>540</width>
+						<width>600</width>
 						<height>262</height>
 						<font>font45</font>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 					<control type="label">
 						<top>20</top>
-						<width>540</width>
+						<width>600</width>
 						<height>625</height>
 						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
 					</control>
 					<control type="label">
 						<top>-20</top>
-						<width>540</width>
+						<width>600</width>
 						<height>625</height>
+						<scroll>true</scroll>
 						<label>[B]$INFO[ListItem.EpgEventTitle,,[CR]][/B]</label>
 					</control>
 				</control>
 				<control type="image">
-					<left>540</left>
-					<top>122</top>
-					<width>240</width>
-					<height>220</height>
+					<left>635</left>
+					<top>190</top>
+					<width>207</width>
+					<height>207</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture fallback="DefaultTVShows.png">$INFO[Listitem.Icon]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<control type="textbox">
-					<top>382</top>
+					<top>500</top>
 					<width>820</width>
 					<bottom>114</bottom>
+					<font>font14</font>
 					<label>[B]$INFO[ListItem.EpisodeName,,[CR]][/B]$INFO[ListItem.Plot]</label>
 				</control>
 				<control type="textbox">
 					<top>612</top>
-					<width>800</width>
+					<width>820</width>
 					<height>362</height>
 					<align>center</align>
-					<font>font27</font>
+					<font>font14</font>
 					<textcolor>80FFFFFF</textcolor>
 					<label>$LOCALIZE[19055]</label>
 					<visible>String.IsEmpty(Listitem.Plot)</visible>
@@ -375,12 +377,13 @@
 			</include>
 			<control type="textbox">
 				<bottom>15</bottom>
-				<width>800</width>
+				<width>830</width>
 				<right>40</right>
-				<height>80</height>
+				<height>90</height>
 				<align>right</align>
+				<font>font14</font>
 				<visible>!String.isempty(ListItem.NextTitle)</visible>
-				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]:[CR][/COLOR]] $INFO[ListItem.NextStartTime]</label>
+				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR], - ][COLOR text_highlight]$INFO[ListItem.NextStartTime][/COLOR]</label>
 				<include>OpenClose_Right</include>
 			</control>
 			<include>MediaMenuMouseOverlay</include>

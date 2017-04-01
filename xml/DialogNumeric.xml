@@ -37,7 +37,7 @@
 				<top>80</top>
 				<width>505</width>
 				<height>90</height>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>

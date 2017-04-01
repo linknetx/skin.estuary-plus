@@ -237,7 +237,7 @@
 		<radioposx>300</radioposx>
 		<font>font25_title</font>
 		<aligny>top</aligny>
-		<textcolor>button_focus</textcolor>
+		<textcolor>text_highlight</textcolor>
 	</include>
 	<include name="MediaMenuCommon">
 		<include>OpenClose_Left</include>

@@ -20,9 +20,9 @@
 				</control>
 				<control type="image">
 					<left>0</left>
-					<top>35</top>
+					<top>27</top>
 					<width>100%</width>
-					<height>190</height>
+					<height>206</height>
 					<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 				</control>
 			</control>
@@ -39,10 +39,10 @@
 					<visible>Control.HasFocus(53)</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<texture colordiffuse="button_focus">colors/grey.png</texture>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-365,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-365,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="365,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="365,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
 				</control>
 				<control type="fixedlist" id="53">
 					<left>-150</left>
@@ -59,18 +59,18 @@
 					<onup>9000</onup>
 					<ondown>5199</ondown>
 					<onright>53</onright>
+					<hitrect x="220" y="75" w="370" h="640"/>
 					<preloaditems>1</preloaditems>
 					<viewtype label="31100">icon</viewtype>
 					<itemlayout width="370">
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>20</left>
 							<top>90</top>
-							<width>370</width>
+							<width>330</width>
 							<height>480</height>
-							<aspectratio aligny="center">keep</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="textbox">
@@ -80,6 +80,7 @@
 							<height>105</height>
 							<align>center</align>
 							<aligny>center</aligny>
+							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="image">
@@ -93,14 +94,25 @@
 					<focusedlayout width="370">
 						<control type="image">
 							<depth>DepthContentPopout</depth>
-							<left>0</left>
+							<left>20</left>
 							<top>90</top>
-							<width>370</width>
+							<width>330</width>
 							<height>480</height>
-							<aspectratio aligny="center">keep</aspectratio>
+							<aspectratio>scale</aspectratio>
 							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
-							<bordertexture border="21">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
+						</control>
+						<control type="image">
+							<depth>DepthContentPopout</depth>
+							<left>20</left>
+							<top>90</top>
+							<width>330</width>
+							<height>480</height>
+							<visible>Control.HasFocus(53)</visible>
+							<animation effect="fade" start="0" end="100" time="200">Focus</animation>
+							<animation effect="fade" start="100" end="0" time="200">UnFocus</animation>
+							<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
+							<bordersize>16</bordersize>
 						</control>
 						<control type="textbox">
 							<left>20</left>
@@ -109,6 +121,7 @@
 							<height>105</height>
 							<align>center</align>
 							<aligny>center</aligny>
+							<font>font14</font>
 							<label>$INFO[ListItem.Label]</label>
 							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
 						</control>
@@ -149,23 +162,23 @@
 					<orientation>horizontal</orientation>
 					<visible>ListItem.IsCollection</visible>
 					<animation effect="fade" time="200">VisibleChange</animation>
-					<focusedlayout height="40" width="628">
+					<focusedlayout height="40" width="940">
 						<control type="label">
 							<textoffsetx>10</textoffsetx>
 							<height>40</height>
-							<width>628</width>
+							<width>940</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<label>$INFO[ListItem.Year,[COLOR text_highlight],: [/COLOR]]$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="40" width="628">
+					<itemlayout height="40" width="940">
 						<control type="label">
 							<textoffsetx>10</textoffsetx>
 							<height>40</height>
-							<width>628</width>
+							<width>940</width>
 							<aligny>center</aligny>
-							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<label>$INFO[ListItem.Year,[COLOR text_highlight],: [/COLOR]]$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</itemlayout>
@@ -180,9 +193,10 @@
 			<animation effect="fade" time="200" start="100" end="0" condition="String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
 			<control type="textbox" id="$PARAM[textbox_id]">
 				<left>30</left>
-				<top>45</top>
+				<top>37</top>
 				<right>30</right>
-				<height>163</height>
+				<height>179</height>
+				<font>font14</font>
 				<label>$PARAM[textbox_content]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>

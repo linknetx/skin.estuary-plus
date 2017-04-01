@@ -78,7 +78,7 @@
 								<aligny>center</aligny>
 								<font>font12</font>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>button_focus</textcolor>
+								<textcolor>text_highlight</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">
@@ -100,7 +100,7 @@
 								<aligny>center</aligny>
 								<label>$INFO[ListItem.Label]</label>
 								<font>font12</font>
-								<textcolor>button_focus</textcolor>
+								<textcolor>text_highlight</textcolor>
 								<shadowcolor>text_shadow</shadowcolor>
 							</control>
 							<control type="label">

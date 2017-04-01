@@ -25,7 +25,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[557]:</label>
 					<visible>String.IsEmpty(RDS.Band)</visible>
 				</control>
@@ -45,7 +45,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29901]:</label>
 					<visible>!String.IsEmpty(RDS.Band)</visible>
 				</control>
@@ -65,7 +65,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[557]:</label>
 					<visible>!String.IsEmpty(RDS.Artist) + !String.IsEmpty(RDS.Band)</visible>
 				</control>
@@ -84,7 +84,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[556]:</label>
 				</control>
 				<control type="fadelabel">
@@ -104,7 +104,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29902]:</label>
 					<visible>!String.IsEmpty(RDS.ProgStyle)</visible>
 				</control>
@@ -129,7 +129,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29903]:</label>
 				</control>
 				<control type="fadelabel">
@@ -148,7 +148,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[556]:</label>
 				</control>
 				<control type="fadelabel">
@@ -168,7 +168,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29904]:</label>
 					<visible>String.IsEmpty(RDS.Band) + !String.IsEmpty(RDS.Artist)</visible>
 				</control>
@@ -189,7 +189,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29901]:</label>
 					<visible>!String.IsEmpty(RDS.Band)</visible>
 				</control>
@@ -211,7 +211,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29904]:</label>
 					<visible>!String.IsEmpty(RDS.Artist) + !String.IsEmpty(RDS.Band)</visible>
 				</control>
@@ -232,7 +232,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29905]:</label>
 					<visible>!String.IsEmpty(RDS.Conductor)</visible>
 				</control>
@@ -254,7 +254,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29902]:</label>
 					<visible>String.IsEmpty(RDS.Conductor) + !String.IsEmpty(RDS.ProgStyle)</visible>
 				</control>
@@ -274,7 +274,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29902]:</label>
 					<visible>!String.IsEmpty(RDS.Conductor) + !String.IsEmpty(RDS.ProgStyle)</visible>
 				</control>
@@ -295,7 +295,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<label>$LOCALIZE[558]:</label>
 				<visible>!String.IsEmpty(RDS.Album)</visible>
 			</control>
@@ -317,7 +317,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<label>$LOCALIZE[29906]:</label>
 				<visible>!String.IsEmpty(RDS.ProgHost)</visible>
 			</control>
@@ -337,7 +337,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<label>$LOCALIZE[569]:</label>
 				<visible>!String.IsEmpty(RDS.Comment)</visible>
 			</control>
@@ -359,7 +359,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<label>$LOCALIZE[19148]:</label>
 			</control>
 			<control type="fadelabel">
@@ -377,7 +377,7 @@
 				<height>25</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 				<label>$LOCALIZE[29907]:</label>
 				<visible>!String.IsEmpty(RDS.ProgEditStaff)</visible>
 			</control>
@@ -404,7 +404,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29908]:</label>
 					<visible>!String.IsEmpty(RDS.ProgNow) | !String.IsEmpty(RDS.ProgNext)</visible>
 				</control>
@@ -414,7 +414,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29909]:</label>
 					<visible>!String.IsEmpty(RDS.PhoneStudio) | !String.IsEmpty(RDS.EmailStudio) | !String.IsEmpty(RDS.SMSStudio)</visible>
 				</control>
@@ -519,7 +519,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29913]:</label>
 					<visible>!String.IsEmpty(RDS.PhoneHotline) | !String.IsEmpty(RDS.EmailHotline)</visible>
 				</control>
@@ -530,7 +530,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29914]:</label>
 					<visible>!String.IsEmpty(RDS.ProgHomepage)</visible>
 				</control>
@@ -597,7 +597,7 @@
 					<height>25</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<label>$LOCALIZE[29915]:</label>
 				</control>
 				<control type="spincontrol" id="21">

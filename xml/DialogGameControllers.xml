@@ -24,7 +24,7 @@
 				<label>$LOCALIZE[35050]</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>button_focus</textcolor>
+				<textcolor>text_highlight</textcolor>
 			</control>
 			<control type="image">
 				<left>-5</left>
@@ -74,7 +74,7 @@
 					<label>$LOCALIZE[35059]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 				</control>
 				<control type="image">
 					<top>20</top>

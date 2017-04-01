@@ -238,7 +238,7 @@
 					<align>center</align>
 					<font>font30_title</font>
 					<aligny>top</aligny>
-					<textcolor>button_focus</textcolor>
+					<textcolor>text_highlight</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
 				</control>

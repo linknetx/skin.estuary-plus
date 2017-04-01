@@ -4,5 +4,7 @@
 	<color name="secondary_background">33DA845C</color>
 	<color name="dialog_tint">FF242728</color>
 	<color name="button_focus">FF607D8B</color>
+	<color name="text_mediumlight">FF7295A6</color>
+	<color name="text_highlight">FF84ACBF</color>
 	<color name="selected">FFFF8C00</color>
 </colors>

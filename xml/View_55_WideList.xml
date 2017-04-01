@@ -7,9 +7,9 @@
 			<include>Visible_Right</include>
 			<control type="fixedlist" id="55">
 				<left>594</left>
-				<top>list_y_offset</top>
+				<top>20</top>
 				<bottom>list_y_offset</bottom>
-				<right>0</right>
+				<right>6</right>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<orientation>vertical</orientation>
 				<pagecontrol>531</pagecontrol>
@@ -35,6 +35,7 @@
 						<bottom>0</bottom>
 						<width>80</width>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$INFO[ListItem.Year]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(videos) + !Container.Content(musicvideos) + !Container.Content(movies)</visible>
@@ -42,8 +43,8 @@
 					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>40</width>
+						<height>40</height>
 						<texture>$VAR[ListWatchedIconVar]</texture>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(videos) | Container.Content(musicvideos) | String.IsEmpty(ListItem.Year)</visible>
 					</control>
@@ -54,6 +55,7 @@
 						<right>100</right>
 						<aligny>center</aligny>
 						<scroll>true</scroll>
+						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -64,6 +66,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -75,16 +78,17 @@
 						<bottom>0</bottom>
 						<width>80</width>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$INFO[ListItem.Year]</label>
-						<textcolor>button_focus</textcolor>
+						<textcolor>text_highlight</textcolor>
 						<shadowcolor>text_shadow</shadowcolor>
 						<visible>!Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(videos) + !Container.Content(musicvideos) + !Container.Content(movies)</visible>
 					</control>
 					<control type="image">
 						<left>35</left>
 						<centertop>50%</centertop>
-						<width>32</width>
-						<height>32</height>
+						<width>40</width>
+						<height>40</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(videos) | Container.Content(musicvideos) | String.IsEmpty(ListItem.Year)</visible>
 					</control>
@@ -94,6 +98,7 @@
 						<bottom>0</bottom>
 						<right>100</right>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$INFO[ListItem.Label]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -104,6 +109,7 @@
 						<right>40</right>
 						<align>right</align>
 						<aligny>center</aligny>
+						<font>font14</font>
 						<label>$VAR[ListLabel2Var]</label>
 						<shadowcolor>text_shadow</shadowcolor>
 					</control>
@@ -111,8 +117,8 @@
 						<left>35</left>
 						<centertop>50%</centertop>
 						<visible>String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.AddonVersion)</visible>
-						<width>32</width>
-						<height>32</height>
+						<width>40</width>
+						<height>40</height>
 						<texture colordiffuse="grey">$VAR[ListWatchedIconVar]</texture>
 					</control>
 				</itemlayout>
@@ -136,6 +142,7 @@
 				<right>90</right>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -145,6 +152,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label2]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -155,6 +163,7 @@
 				<height>80</height>
 				<right>90</right>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label]</label>
 				<shadowcolor>text_shadow</shadowcolor>
 			</control>
@@ -164,6 +173,7 @@
 				<right>40</right>
 				<align>right</align>
 				<aligny>center</aligny>
+				<font>font14</font>
 				<label>$INFO[ListItem.Label2]</label>
 				<textcolor>grey</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>

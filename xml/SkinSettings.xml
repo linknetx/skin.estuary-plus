@@ -61,6 +61,18 @@
 					<onclick>Skin.ToggleSetting(hide_mediaflags)</onclick>
 					<selected>!Skin.HasSetting(hide_mediaflags)</selected>
 				</control>
+				<control type="radiobutton" id="706">
+					<label>$LOCALIZE[31200]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(HideSeekbarWhenPaused)</selected>
+					<onclick>Skin.ToggleSetting(HideSeekbarWhenPaused)</onclick>
+				</control>
+				<control type="radiobutton" id="707">
+					<label>$LOCALIZE[31201]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(EnableHomeScreenScrollbars)</selected>
+					<onclick>Skin.ToggleSetting(EnableHomeScreenScrollbars)</onclick>
+				</control>
 			</control>
 			<control type="grouplist" id="600">
 				<top>160</top>
@@ -319,7 +331,7 @@
 			<height>100</height>
 			<font>font12</font>
 			<align>justify</align>
-			<textcolor>button_focus</textcolor>
+			<textcolor>text_highlight</textcolor>
 			<label>$VAR[SkinSettingsHelpTextVar]</label>
 			<autoscroll time="3000" delay="5000" repeat="5000">true</autoscroll>
 		</control>
