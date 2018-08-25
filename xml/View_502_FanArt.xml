@@ -3,10 +3,11 @@
 	<include name="View_502_FanArt">
 		<control type="group">
 			<include>OpenClose_Left</include>
-			<left>-5</left>
 			<visible>Control.IsVisible(502)</visible>
 			<include>Visible_Left</include>
 			<include content="ListContainer">
+				<param name="left" value="-5" />
+				<param name="right" value="1195" />
 				<param name="list_id" value="502" />
 				<param name="viewtype_label" value="$LOCALIZE[20445]" />
 			</include>
@@ -37,7 +38,7 @@
 				<control type="group">
 					<left>600</left>
 					<top>82</top>
-					<include>UserRatingCircle</include>
+					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
 				</control>
 				<control type="textbox">
 					<left>50</left>
@@ -46,7 +47,7 @@
 					<bottom>105</bottom>
 					<font>font14</font>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="scrollbar" id="502600">
 					<left>20</left>
@@ -57,11 +58,12 @@
 					<onright>502</onright>
 					<orientation>vertical</orientation>
 					<animation effect="zoom" end="50,100" time="300" tween="sine" center="20,0" easing="inout" condition="!Control.HasFocus(502600)">conditional</animation>
+					<hitrect x="-30" y="0" w="120" h="100%" />
 				</control>
 				<control type="group">
 					<left>40</left>
 					<top>770</top>
-					<visible>ListItem.IsCollection</visible>
+					<visible>ListItem.IsCollection + String.IsEmpty(ListItem.Plot)</visible>
 					<include content="InfoList">
 						<param name="bottom" value="108" />
 						<param name="width" value="1000" />

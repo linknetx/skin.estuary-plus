@@ -59,3 +59,11 @@ msgstr "Lokaalsed subtiitrid on saadaval"
 msgctxt "#31100"
 msgid "Shift"
 msgstr "Nihe"
+
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "Teletekst"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profiili nimi"

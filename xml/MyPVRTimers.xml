@@ -12,7 +12,7 @@
 				<control type="fixedlist" id="50">
 					<left>0</left>
 					<top>list_y_offset</top>
-					<right>860</right>
+					<right>918</right>
 					<bottom>list_y_offset</bottom>
 					<onup>50</onup>
 					<ondown>50</ondown>
@@ -22,7 +22,7 @@
 					<focusposition>5</focusposition>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="100" width="tvrecordings_width">
+					<itemlayout height="100">
 						<control type="label">
 							<left>30</left>
 							<top>0</top>
@@ -86,7 +86,7 @@
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout height="100" width="tvrecordings_width">
+					<focusedlayout height="100">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -114,7 +114,6 @@
 								<height>100</height>
 								<aligny>top</aligny>
 								<font>font14</font>
-								<scroll>true</scroll>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 							<control type="label">
@@ -162,7 +161,7 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Right</include>
-				<width>810</width>
+				<width>870</width>
 				<right>0</right>
 				<include content="ContentPanel">
 					<param name="left" value="-72" />
@@ -180,7 +179,9 @@
 					<orientation>vertical</orientation>
 					<animation effect="zoom" start="100,100" end="50,100" center="-50,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(73)">conditional</animation>
 				</control>
-				<include>PVRInfoPanel</include>
+				<include content="PVRInfoPanel">
+					<param name="folder_sortorder" value="ascending" />
+				</include>
 			</control>
 		</control>
 		<include content="TopBar">
@@ -191,10 +192,9 @@
 		</include>
 		<control type="label">
 			<right>20</right>
-			<description>Disk usage text</description>
 			<include>OpenClose_Right</include>
 			<bottom>10</bottom>
-			<width>800</width>
+			<width>850</width>
 			<height>60</height>
 			<label>$INFO[PVR.NextTimer]</label>
 			<shadowcolor>black</shadowcolor>
@@ -208,11 +208,11 @@
 			<include>PVRSideBar</include>
 		</control>
 		<control type="label" id="29">
-			<font>-</font>
+			<font></font>
 			<include>HiddenObject</include>
 		</control>
 		<control type="label" id="30">
-			<font>-</font>
+			<font></font>
 			<include>HiddenObject</include>
 		</control>
 	</controls>

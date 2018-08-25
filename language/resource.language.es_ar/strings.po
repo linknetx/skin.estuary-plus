@@ -192,10 +192,6 @@ msgctxt "#31050"
 msgid "Press [B]OK[/B] to stop"
 msgstr "Presione [B]OK[/B] para detener"
 
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Cambiar idioma"
-
 msgctxt "#31052"
 msgid "filtered"
 msgstr "filtrado"
@@ -382,7 +378,7 @@ msgstr "Eliminar este elemento del menú principal"
 
 msgctxt "#31117"
 msgid "Edit nodes"
-msgstr "Editar notas"
+msgstr "Editar nodos"
 
 msgctxt "#31118"
 msgid "Enter add-on browser"
@@ -439,10 +435,6 @@ msgstr "Ajustes relativos al menú principal: Configure la pantalla principal a 
 msgctxt "#31131"
 msgid "Choose skin fanart pack"
 msgstr "Elegir pack de fanart para skin"
-
-msgctxt "#31132"
-msgid "min"
-msgstr "min"
 
 msgctxt "#31134"
 msgid "Remaining"
@@ -543,3 +535,7 @@ msgstr "Mostrar banderas de medios"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Teclado numérico"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Nombre de perfil"

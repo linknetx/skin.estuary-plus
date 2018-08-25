@@ -24,7 +24,7 @@
 			<height>49</height>
 			<textoffsetx>40</textoffsetx>
 			<aligny>center</aligny>
-			<font>font10_bold</font>
+			<font>font12</font>
 			<texturefocus />
 			<texturenofocus />
 			<onclick>noop</onclick>

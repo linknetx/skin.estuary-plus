@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="HomeScreenScrollbar">
-		<control type="scrollbar" id="$PARAM[id]">
-			<right>0</right>
-			<top>list_y_offset</top>
-			<width>12</width>
-			<bottom>list_y_offset</bottom>
-			<texturesliderbackground colordiffuse="FF222222">colors/white.png</texturesliderbackground>
-			<onleft>$PARAM[onunfocus_id]</onleft>
-			<onright>$PARAM[onunfocus_id]</onright>
-			<orientation>vertical</orientation>
-			<animation effect="fade" start="100" end="50" time="300" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-			<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-		</control>
-	</include>
-	<include name="HomeScreenScrollbarOffset">
-		<right>6</right>
-	</include>
 	<include name="WidgetGroupListCommon">
 		<orientation>vertical</orientation>
 		<height>100%</height>
@@ -88,12 +71,11 @@
 				<param name="posy" value="250"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>115</top>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
 				<right>0</right>
-				<height>500</height>
+				<height>503</height>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
 				</include>
@@ -202,7 +184,6 @@
 				<param name="posy" value="200"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>105</top>
 				<right>0</right>
@@ -258,13 +239,14 @@
 			<include content="CategoryLabel">
 				<param name="label">$PARAM[widget_header]</param>
 				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<include content="BusyListSpinner">
 				<param name="list_id" value="$PARAM[list_id]"/>
 				<param name="posy" value="220"/>
+				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
@@ -312,7 +294,6 @@
 		<param name="icon">$INFO[ListItem.Icon]</param>
 		<param name="icon_height">120</param>
 		<param name="pvr_submenu">false</param>
-		<param name="addon_submenu">false</param>
 		<param name="pvr_type">TV</param>
 		<param name="visible">true</param>
 		<definition>
@@ -326,7 +307,6 @@
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>110</top>
 				<right>0</right>
@@ -348,14 +328,14 @@
 						</control>
 						<control type="image">
 							<centertop>74</centertop>
-							<left>62</left>
+							<left>58</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
-							<left>42</left>
+							<left>38</left>
 							<top>106</top>
 							<width>240</width>
 							<height>70</height>
@@ -393,14 +373,14 @@
 						</control>
 						<control type="image">
 							<centertop>74</centertop>
-							<left>62</left>
+							<left>58</left>
 							<width>200</width>
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="textbox">
-							<left>42</left>
+							<left>38</left>
 							<top>106</top>
 							<width>240</width>
 							<height>70</height>
@@ -412,7 +392,7 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<include condition="!$PARAM[pvr_submenu] + !$PARAM[addon_submenu]" content="SubmenuContent">
+				<include condition="!$PARAM[pvr_submenu]" content="SubmenuContent">
 					<param name="widget_target" value="$PARAM[widget_target]"/>
 					<param name="item_limit" value="$PARAM[item_limit]"/>
 					<param name="content_path" value="$PARAM[content_path]"/>
@@ -420,41 +400,11 @@
 				<include condition="$PARAM[pvr_submenu]" content="PVRSubMenuContent">
 					<param name="pvr_type" value="$PARAM[pvr_type]"/>
 				</include>
-				<include condition="$PARAM[addon_submenu]">AddonSubMenuContent</include>
 			</control>
 		</definition>
 	</include>
 	<include name="SubmenuContent">
 		<content target="$PARAM[widget_target]" limit="$PARAM[item_limit]">$PARAM[content_path]</content>
-	</include>
-	<include name="AddonSubMenuContent">
-		<content>
-			<item>
-				<label>$LOCALIZE[24998]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://user/,return)</onclick>
-				<thumb>DefaultAddonsInstalled.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24043]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://outdated/,return)</onclick>
-				<thumb>DefaultAddonsUpdates.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24004]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://recently_updated/,return)</onclick>
-				<thumb>DefaultAddonsRecentlyUpdated.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[24033]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://repos/,return)</onclick>
-				<thumb>DefaultAddonsRepo.png</thumb>
-			</item>
-			<item>
-				<label>$LOCALIZE[137]</label>
-				<onclick>ActivateWindow(addonbrowser,addons://search/,return)</onclick>
-				<thumb>DefaultAddonsSearch.png</thumb>
-			</item>
-		</content>
 	</include>
 	<include name="PVRSubMenuContent">
 		<content>
@@ -505,7 +455,6 @@
 				<param name="posy" value="200"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<onright>$PARAM[scrollbar_id]</onright>
 				<left>0</left>
 				<top>120</top>
 				<right>0</right>
@@ -942,10 +891,7 @@
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
 		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
-		<onback>PageUp</onback>
-		<onback>PageUp</onback>
-		<onback>PageUp</onback>
-		<onback>PageUp</onback>
+		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
 		<preloaditems>2</preloaditems>
 	</include>
 	<include name="BusyListSpinner">
@@ -974,5 +920,27 @@
 				</control>
 			</control>
 		</definition>
+	</include>
+	<include name="WidgetScrollbar">
+		<control type="group">
+			<right>0</right>
+			<top>80</top>
+			<bottom>80</bottom>
+			<width>60</width>
+			<control type="scrollbar" id="$PARAM[scrollbar_id]">
+				<right>0</right>
+				<top>0</top>
+				<bottom>0</bottom>
+				<width>13</width>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<orientation>vertical</orientation>
+				<texturesliderbackground />
+				<hitrect x="0" y="0" w="60" h="100%" />
+				<animation effect="fade" start="0" end="100" time="200" delay="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+				<animation effect="slide" end="6,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus($PARAM[scrollbar_id])">conditional</animation>
+			</control>
+		</control>
 	</include>
 </includes>

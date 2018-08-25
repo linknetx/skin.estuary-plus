@@ -48,6 +48,10 @@ msgctxt "#31007"
 msgid "Unwatched movies"
 msgstr "Osedda filmer"
 
+msgctxt "#31008"
+msgid "Enable category widgets"
+msgstr "Aktivera gränssnittskomponenter för kategorier"
+
 msgctxt "#31009"
 msgid "Download icons"
 msgstr "Ladda ner ikoner"
@@ -108,6 +112,10 @@ msgctxt "#31023"
 msgid "Viewtype"
 msgstr "Vy"
 
+msgctxt "#31024"
+msgid "Choose rating to display for media items"
+msgstr "Välj betyg att visa för mediaobjekt"
+
 msgctxt "#31025"
 msgid "No favourites found. You can add any item from media views to this list by using the context menu."
 msgstr "Inga favoriter hittades. Du kan lägga till objekt från mediavyer till den här listan genom att använda innehållsmenyn."
@@ -154,11 +162,11 @@ msgstr "objekt"
 
 msgctxt "#31038"
 msgid "Rewind"
-msgstr "Spola bakåt"
+msgstr "Spolar bakåt"
 
 msgctxt "#31039"
 msgid "Fast forward"
-msgstr "Spola framåt"
+msgstr "Spolar framåt"
 
 msgctxt "#31041"
 msgid "Camera manufacturer"
@@ -191,10 +199,6 @@ msgstr "Tillgänglig"
 msgctxt "#31050"
 msgid "Press [B]OK[/B] to stop"
 msgstr "Tryck på [B]OK[/B] för att stoppa"
-
-msgctxt "#31051"
-msgid "Toggle language"
-msgstr "Växla språk"
 
 msgctxt "#31052"
 msgid "filtered"
@@ -338,7 +342,7 @@ msgstr "Ange text här..."
 
 msgctxt "#31104"
 msgid "Your library is currently empty. In order to populate it with your personal media, enter \"Files\" section, add a media source and configure it. After the source has been added and indexed you will be able to browse your library."
-msgstr "Biblioteket är för närvarande tomt. För att fylla det med din personliga media, gå till \"Fil\"-sektionen, lägg till en mediakälla och konfigurera den. Efter att källan har lagts till och indexerats, kommer du att kunna bläddra i biblioteket."
+msgstr "Biblioteket är för närvarande tomt. För att fylla det med din personliga media, gå till Filsektionen, lägg till en mediakälla och konfigurera den. Efter att källan har lagts till och indexerats, kommer du att kunna bläddra i biblioteket."
 
 msgctxt "#31105"
 msgid "Add video sources and set the appropriate content type in order to populate your video libraries."
@@ -441,8 +445,12 @@ msgid "Choose skin fanart pack"
 msgstr "Välj skal-fanart paket"
 
 msgctxt "#31132"
-msgid "min"
-msgstr "min"
+msgid "Select Program"
+msgstr "Välj program"
+
+msgctxt "#31133"
+msgid "Select Resolution"
+msgstr "Välj upplösning"
 
 msgctxt "#31134"
 msgid "Remaining"
@@ -458,7 +466,7 @@ msgstr "PVR-info"
 
 msgctxt "#31138"
 msgid "Player process info"
-msgstr "Spelarprocess info"
+msgstr "Spelarprocessinfo"
 
 msgctxt "#31139"
 msgid "Video decoder"
@@ -478,7 +486,7 @@ msgstr "Uppspelningshastighet"
 
 msgctxt "#31143"
 msgid "You did not set up PVR yet. In order to use PVR, choose a PVR client addon and configure it. Please visit http://kodi.wiki/view/PVR to learn more."
-msgstr "Du har inte konfigurerat PVR ännu. För att kunna nyttja PVR måste du välja PVR-klientstillägg, samt konfigurera det. Besök http://kodi.wiki/view/PVR för att lära dig mer."
+msgstr "Du har inte konfigurerat PVR ännu. För att kunna nyttja PVR måste du välja PVR-klienttillägg, samt konfigurera det. Besök http://kodi.wiki/view/PVR för att lära dig mer."
 
 msgctxt "#31144"
 msgid "Enter add-on browser"
@@ -486,7 +494,7 @@ msgstr "Gå till tilläggsutforskaren"
 
 msgctxt "#31145"
 msgid "Search add-ons"
-msgstr "Sök i tillägg"
+msgstr "Sök bland tillägg"
 
 msgctxt "#31148"
 msgid "Categories"
@@ -543,3 +551,15 @@ msgstr "Visa mediaflaggor"
 msgctxt "#31161"
 msgid "Numeric pad"
 msgstr "Numerisk knappsats"
+
+msgctxt "#31162"
+msgid "Play your personal games or download one of the many game add-ons from the official repository."
+msgstr "Spela dina egna spel eller ladda ned någon av de många speltillägg från det officiella förrådet."
+
+msgctxt "#31163"
+msgid "Show Fanart background"
+msgstr "Visa Fanart-bakgrund"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Profilnamn"

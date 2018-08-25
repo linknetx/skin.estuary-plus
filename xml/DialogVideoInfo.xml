@@ -366,7 +366,6 @@
 								<width>232</width>
 								<height>285</height>
 								<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
-								<visible>Control.HasFocus(50)</visible>
 							</control>
 						</control>
 					</focusedlayout>
@@ -505,7 +504,7 @@
 				<textcolor>99FFFFFF</textcolor>
 				<shadowcolor>text_shadow</shadowcolor>
 				<haspath>true</haspath>
-				<label>$INFO[ListItem.FileNameANdPath]</label>
+				<label>$VAR[VideoInfoBottomLabelVar]</label>
 				<visible>Control.HasFocus(6)</visible>
 				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
@@ -567,5 +566,6 @@
 				</control>
 			</control>
 		</control>
+		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
 	</controls>
 </window>

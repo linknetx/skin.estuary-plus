@@ -16,6 +16,10 @@ msgstr ""
 "Language: cy_GB\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != 11) ? 2 : 3;\n"
 
+msgctxt "#31000"
+msgid "Now playing"
+msgstr "Wrthi'n chwarae"
+
 msgctxt "#31001"
 msgid "Search..."
 msgstr "Chwilio..."
@@ -36,6 +40,10 @@ msgctxt "#31020"
 msgid "Actions"
 msgstr "Gweithredoedd"
 
+msgctxt "#31021"
+msgid "Misc options"
+msgstr "Dewisiadau eraill"
+
 msgctxt "#31038"
 msgid "Rewind"
 msgstr "Nôl"
@@ -43,6 +51,14 @@ msgstr "Nôl"
 msgctxt "#31053"
 msgid "Arial based"
 msgstr "Seileidig ar Ariel"
+
+msgctxt "#31066"
+msgid "Music playlist"
+msgstr "Rhestrau chwarae cerddoriaeth"
+
+msgctxt "#31067"
+msgid "Event log"
+msgstr "Log y digwyddiad"
 
 msgctxt "#31069"
 msgid "Last Updated"
@@ -59,3 +75,15 @@ msgstr "Is deitlau lleol ar gael"
 msgctxt "#31100"
 msgid "Shift"
 msgstr "Shift"
+
+msgctxt "#31106"
+msgid "Teletext"
+msgstr "Teludestun"
+
+msgctxt "#31138"
+msgid "Player process info"
+msgstr "Gwybodaeth ar gynnydd chwaraewr"
+
+msgctxt "#31165"
+msgid "Profile name"
+msgstr "Enw proffil"
