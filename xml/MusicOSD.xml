@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
+	<onload condition="!Player.PauseEnabled">SetFocus(603)</onload>
 	<defaultcontrol always="true">602</defaultcontrol>
 	<depth>DepthOSD</depth>
 	<controls>
@@ -28,14 +29,14 @@
 			</animation>
 			<control type="grouplist" id="201">
 				<left>20</left>
-				<top>30</top>
+				<top>15</top>
 				<width>100%</width>
 				<height>135</height>
 				<itemgap>20</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onup>87</onup>
-				<ondown>noop</ondown>
+				<onup>noop</onup>
+				<ondown>87</ondown>
 				<onleft>5000</onleft>
 				<onright>620</onright>
 				<control type="radiobutton" id="600">
@@ -62,6 +63,7 @@
 					<radioposy>0</radioposy>
 					<selected>Player.Paused</selected>
 					<onclick>PlayerControl(Play)</onclick>
+					<visible>Player.PauseEnabled</visible>
 				</control>
 				<control type="radiobutton" id="603">
 					<include content="OSDButton">
@@ -99,15 +101,15 @@
 			</control>
 			<control type="grouplist" id="202">
 				<right>20</right>
-				<top>30</top>
+				<top>15</top>
 				<width>1850</width>
 				<height>135</height>
 				<align>right</align>
 				<itemgap>20</itemgap>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>horizontal</orientation>
-				<onup>87</onup>
-				<ondown>noop</ondown>
+				<onup>noop</onup>
+				<ondown>87</ondown>
 				<onleft>606</onleft>
 				<onright>600</onright>
 				<control type="radiobutton" id="620">
@@ -131,8 +133,8 @@
 						<texturenofocus />
 						<onleft>620</onleft>
 						<onright>607</onright>
-						<onup>87</onup>
-						<ondown>noop</ondown>
+						<onup>noop</onup>
+						<ondown>87</ondown>
 						<onclick>PlayerControl(Repeat)</onclick>
 					</control>
 					<control type="image">
@@ -183,13 +185,13 @@
 				</control>
 			</control>
 			<control type="label">
-				<right>30</right>
-				<top>-60</top>
-				<textoffsetx>20</textoffsetx>
+				<animation effect="slide" end="0,-20" time="150" condition="MusicPlayer.Content(LiveTV)">conditional</animation>
+				<right>20</right>
+				<top>-40</top>
 				<aligny>center</aligny>
 				<align>right</align>
-				<width>1858</width>
-				<height>60</height>
+				<width>1000</width>
+				<height>50</height>
 				<label>$VAR[MusicOSDHelpTextVar]</label>
 			</control>
 		</control>
@@ -201,7 +203,7 @@
 			<control type="button" id="87">
 				<include>HiddenObject</include>
 				<onup condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</onup>
-				<onup>201</onup>
+				<onup>200</onup>
 				<ondown condition="Player.Forwarding | Player.Rewinding">PlayerControl(Play)</ondown>
 				<ondown>200</ondown>
 				<onright condition="!Player.Forwarding32x">PlayerControl(Forward)</onright>
@@ -211,57 +213,57 @@
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>95</top>
 				<width>100%</width>
-				<height>25</height>
-				<onup>8010</onup>
-				<ondown>650</ondown>
+				<height>26</height>
+				<onup>650</onup>
+				<ondown>8010</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
-				<visible>Player.SeekEnabled + !Control.HasFocus(87) + !VideoPlayer.HasEpg</visible>
+				<visible>Player.SeekEnabled + !Control.HasFocus(87) + !MusicPlayer.Content(LiveTV)</visible>
 				<action>seek</action>
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>95</top>
 				<width>100%</width>
-				<height>25</height>
-				<onup>8010</onup>
-				<ondown>650</ondown>
+				<height>26</height>
+				<onup>650</onup>
+				<ondown>8010</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 				<info>Player.Progress</info>
-				<visible>Player.SeekEnabled + Control.HasFocus(87) + !VideoPlayer.HasEpg</visible>
+				<visible>Player.SeekEnabled + Control.HasFocus(87) + !MusicPlayer.Content(LiveTV)</visible>
 				<action>seek</action>
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>95</top>
 				<width>100%</width>
-				<height>25</height>
-				<onup>8010</onup>
-				<ondown>650</ondown>
+				<height>26</height>
+				<onup>650</onup>
+				<ondown>8010</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>PVR.EpgEventProgress</info>
-				<visible>Player.SeekEnabled + !Control.HasFocus(87) + VideoPlayer.HasEpg</visible>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<visible>Player.SeekEnabled + !Control.HasFocus(87) + MusicPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="slider">
 				<left>0</left>
-				<top>-5</top>
+				<top>95</top>
 				<width>100%</width>
-				<height>25</height>
-				<onup>8010</onup>
-				<ondown>650</ondown>
+				<height>26</height>
+				<onup>650</onup>
+				<ondown>8010</ondown>
 				<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
 				<textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
 				<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
-				<info>PVR.EpgEventProgress</info>
-				<visible>Player.SeekEnabled + Control.HasFocus(87) + VideoPlayer.HasEpg</visible>
+				<info>PVR.TimeshiftProgressPlayPos</info>
+				<visible>Player.SeekEnabled + Control.HasFocus(87) + MusicPlayer.Content(LiveTV)</visible>
 			</control>
 		</control>
 	</controls>
