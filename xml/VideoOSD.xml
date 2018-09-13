@@ -48,7 +48,7 @@
 							<param name="texture" value="osd/fullscreen/buttons/previous.png"/>
 						</include>
 						<onclick>PlayerControl(Previous)</onclick>
-						<visible>!VideoPlayer.Content(livetv) + [Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled]</visible>
+						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | Player.SeekEnabled</visible>
 					</control>
 					<control type="radiobutton" id="602">
 						<textureradioonfocus colordiffuse="white">osd/fullscreen/buttons/play.png</textureradioonfocus>
@@ -80,7 +80,7 @@
 							<param name="texture" value="osd/fullscreen/buttons/next.png"/>
 						</include>
 						<onclick>PlayerControl(Next)</onclick>
-						<visible>!VideoPlayer.Content(livetv) + [Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1)]</visible>
+						<visible>Player.ChapterCount | Integer.IsGreater(Playlist.Length(video),1) | [VideoPlayer.Content(LiveTV) + Player.SeekEnabled]</visible>
 					</control>
 					<control type="radiobutton" id="804">
 						<include content="OSDButton">
@@ -227,6 +227,7 @@
 					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>
+					<action>pvr.seek</action>
 					<visible>!Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="slider">
@@ -238,6 +239,7 @@
 					<textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
 					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>PVR.TimeshiftProgressPlayPos</info>
+					<action>pvr.seek</action>
 					<visible>Control.HasFocus(87) + VideoPlayer.Content(LiveTV)</visible>
 				</control>
 			</control>
