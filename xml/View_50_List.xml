@@ -203,7 +203,7 @@
 						<width>525</width>
 						<bottom>117</bottom>
 						<font>font14</font>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + !Skin.HasSetting(no_autoscroll)</autoscroll>
 						<label>$VAR[ListBoxInfoVar]</label>
 						<visible>!String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
@@ -212,7 +212,7 @@
 						<width>525</width>
 						<bottom>96</bottom>
 						<font>font14</font>
-						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + !Skin.HasSetting(no_autoscroll)</autoscroll>
 						<label>$INFO[ListItem.Plot]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>

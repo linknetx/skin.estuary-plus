@@ -273,7 +273,7 @@
 				<bottom>75</bottom>
 				<font>font14</font>
 				<label>$INFO[ListItem.Plot]</label>
-				<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll delay="10000" time="3000" repeat="10000">!Skin.HasSetting(no_autoscroll)</autoscroll>
 			</control>
 			<control type="textbox">
 				<top>530</top>
@@ -353,7 +353,7 @@
 				<left>0</left>
 				<top>$PARAM[control_top]</top>
 				<right>20</right>
-				<bottom>264</bottom>
+				<bottom>$PARAM[control_bottom]</bottom>
 				<orientation>$PARAM[control_orientation]</orientation>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">300</scrolltime>
@@ -494,7 +494,7 @@
 				<right>0</right>
 				<top>$PARAM[scrollbar_top]</top>
 				<width>12</width>
-				<bottom>264</bottom>
+				<bottom>$PARAM[control_bottom]</bottom>
 				<onleft>10</onleft>
 				<onright>10</onright>
 				<orientation>vertical</orientation>

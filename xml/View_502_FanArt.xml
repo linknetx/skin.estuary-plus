@@ -47,7 +47,7 @@
 					<bottom>105</bottom>
 					<font>font14</font>
 					<label>$INFO[ListItem.Plot]</label>
-					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+					<autoscroll time="3000" delay="7000" repeat="5000">!System.HasActiveModalDialog + !Skin.HasSetting(no_autoscroll)</autoscroll>
 				</control>
 				<control type="scrollbar" id="502600">
 					<left>20</left>

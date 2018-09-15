@@ -14,13 +14,13 @@
 				<include>OpenClose_Right</include>
 				<include>Visible_Right</include>
 				<control type="group">
-					<top>140</top>
+					<top>120</top>
 					<depth>DepthContentPanel</depth>
 					<control type="image">
 						<left>0</left>
 						<top>-10</top>
 						<width>100%</width>
-						<bottom>260</bottom>
+						<bottom>280</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
 					<control type="group">
@@ -116,6 +116,7 @@
 							<param name="control_id" value="50"/>
 							<param name="control_orientation" value="vertical"/>
 							<param name="control_top" value="70"/>
+							<param name="control_bottom" value="284"/>
 							<param name="control_onupdown_id" value="11"/>
 							<param name="viewtype_label" value="19298"/>
 							<param name="progress_texture_border" value="0,60,18,14"/>
@@ -130,6 +131,7 @@
 							<param name="control_id" value="51"/>
 							<param name="control_orientation" value="horizontal"/>
 							<param name="control_top" value="70"/>
+							<param name="control_bottom" value="284"/>
 							<param name="control_onupdown_id" value="11"/>
 							<param name="viewtype_label" value="19297"/>
 							<param name="progress_texture_border" value="5,10,5,10"/>
@@ -144,6 +146,7 @@
 							<param name="control_id" value="52"/>
 							<param name="control_orientation" value="vertical"/>
 							<param name="control_top" value="0"/>
+							<param name="control_bottom" value="284"/>
 							<param name="control_onupdown_id" value="52"/>
 							<param name="viewtype_label" value="19301"/>
 							<param name="progress_texture_border" value="0,60,18,14"/>
@@ -158,6 +161,7 @@
 							<param name="control_id" value="53"/>
 							<param name="control_orientation" value="horizontal"/>
 							<param name="control_top" value="0"/>
+							<param name="control_bottom" value="284"/>
 							<param name="control_onupdown_id" value="53"/>
 							<param name="viewtype_label" value="19300"/>
 							<param name="progress_texture_border" value="5,10,5,10"/>
@@ -171,33 +175,61 @@
 					</control>
 				</control>
 				<control type="group">
-					<bottom>0</bottom>
-					<height>235</height>
+					<bottom>90</bottom>
+					<height>180</height>
 					<control type="image">
-						<left>105</left>
-						<width>122</width>
-						<height>122</height>
-						<aspectratio align="right">keep</aspectratio>
+						<top>10</top>
+						<left>30</left>
+						<width>290</width>
+						<height>160</height>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<fadetime>400</fadetime>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="label">
-						<top>-9</top>
-						<left>270</left>
-						<right>60</right>
-						<height>30</height>
-						<font>font14</font>
-						<textcolor>text_highlight</textcolor>
-						<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]$INFO[ListItem.EpgEventTitle,  [COLOR white],[/COLOR]]$INFO[ListItem.EpisodeName, [COLOR grey](,)[/COLOR]]$INFO[ListItem.Genre,  $LOCALIZE[515]: [COLOR white],[/COLOR]]</label>
+					<control type="group">
+						<top>0</top>
+						<left>350</left>
+						<control type="label">
+							<width>70%</width>
+							<height>30</height>
+							<font>font14</font>
+							<label>[B]$INFO[ListItem.EpgEventTitle][/B]</label>
+						</control>
+						<control type="label">
+							<top>0</top>
+							<right>30</right>
+							<width>30%</width>
+							<height>30</height>
+							<align>right</align>
+							<font>font14</font>
+							<label>[B][COLOR text_highlight]$INFO[ListItem.StartTime,[COLOR grey][/B]$LOCALIZE[555]:[B][/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR text_highlight] - ,[/COLOR]][/B]</label>
+						</control>
+						<control type="label">
+							<top>40</top>
+							<width>60%</width>
+							<height>30</height>
+							<font>font14</font>
+							<label>[I][COLOR text_highlight]$VAR[SeasonEpisodeLabel][/COLOR]$INFO[ListItem.EpisodeName,[COLOR white],[/COLOR]][/I]</label>
+						</control>
+						<control type="label">
+							<top>40</top>
+							<right>30</right>
+							<width>40%</width>
+							<height>30</height>
+							<align>right</align>
+							<font>font14</font>
+							<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ]</label>
+						</control>
 					</control>
 					<control type="textbox">
-						<left>270</left>
-						<top>38</top>
-						<right>60</right>
-						<height>173</height>
+						<left>350</left>
+						<top>80</top>
+						<right>30</right>
+						<height>90</height>
+						<align>justify</align>
 						<font>font14</font>
 						<label>$INFO[ListItem.Plot]</label>
-						<autoscroll delay="10000" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<autoscroll delay="5000" time="5000" repeat="7500">!Skin.HasSetting(no_autoscroll)</autoscroll>
 					</control>
 				</control>
 			</control>
