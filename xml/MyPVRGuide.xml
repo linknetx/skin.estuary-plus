@@ -202,7 +202,7 @@
 							<height>30</height>
 							<align>right</align>
 							<font>font14</font>
-							<label>[B][COLOR text_highlight]$INFO[ListItem.StartTime,[COLOR grey][/B]$LOCALIZE[555]:[B][/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR text_highlight] - ,[/COLOR]][/B]</label>
+							<label>[B][COLOR white]$INFO[ListItem.StartTime,[COLOR text_highlight][/B]$LOCALIZE[555]:[B][/COLOR] ][/COLOR]$INFO[ListItem.EndTime,[COLOR white] - ,[/COLOR]][/B]</label>
 						</control>
 						<control type="label">
 							<top>40</top>
@@ -218,7 +218,18 @@
 							<height>30</height>
 							<align>right</align>
 							<font>font14</font>
-							<label>$INFO[ListItem.Genre,[COLOR grey]$LOCALIZE[515]:[/COLOR] ]</label>
+							<label>$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]:[/COLOR] ]</label>
+							<visible>!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode) | !String.IsEmpty(ListItem.EpisodeName)</visible>
+						</control>
+						<control type="label">
+							<top>130</top>
+							<right>30</right>
+							<width>40%</width>
+							<height>30</height>
+							<align>right</align>
+							<font>font14</font>
+							<label>$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]:[/COLOR] ]</label>
+							<visible>String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)</visible>
 						</control>
 					</control>
 					<control type="textbox">
@@ -230,6 +241,18 @@
 						<font>font14</font>
 						<label>$INFO[ListItem.Plot]</label>
 						<autoscroll delay="5000" time="5000" repeat="7500">!Skin.HasSetting(no_autoscroll)</autoscroll>
+						<visible>!String.IsEmpty(ListItem.Season) | !String.IsEmpty(ListItem.Episode) | !String.IsEmpty(ListItem.EpisodeName)</visible>
+					</control>
+					<control type="textbox">
+						<left>350</left>
+						<top>45</top>
+						<right>30</right>
+						<height>90</height>
+						<align>justify</align>
+						<font>font14</font>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll delay="5000" time="5000" repeat="7500">!Skin.HasSetting(no_autoscroll)</autoscroll>
+						<visible>String.IsEmpty(ListItem.Season) + String.IsEmpty(ListItem.Episode) + String.IsEmpty(ListItem.EpisodeName)</visible>
 					</control>
 				</control>
 			</control>
