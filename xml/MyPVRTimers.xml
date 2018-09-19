@@ -195,13 +195,13 @@
 			<include>OpenClose_Right</include>
 			<bottom>10</bottom>
 			<width>850</width>
-			<height>60</height>
+			<height>70</height>
 			<label>$INFO[PVR.NextTimer]</label>
 			<shadowcolor>black</shadowcolor>
 			<align>right</align>
 			<aligny>center</aligny>
 			<wrapmultiline>true</wrapmultiline>
-			<font>font27</font>
+			<font>font13</font>
 		</control>
 		<control type="group">
 			<include>MediaMenuCommon</include>

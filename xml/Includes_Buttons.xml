@@ -242,6 +242,36 @@
 			</control>
 		</definition>
 	</include>
+	<include name="PVRinfoDialogButton">
+		<param name="width">330</param>
+		<definition>
+			<control type="radiobutton" id="$PARAM[id]">
+				<width>$PARAM[width]</width>
+				<height>180</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+				<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
+				<textoffsetx>35</textoffsetx>
+				<textoffsety>105</textoffsety>
+				<radioposx>135</radioposx>
+				<radioposy>30</radioposy>
+				<radiowidth>60</radiowidth>
+				<font>font13</font>
+				<textureradioonfocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="D0FFFFFF">$PARAM[icon]</textureradiooffnofocus>
+				<textureradiooffdisabled colordiffuse="disabled">$PARAM[icon]</textureradiooffdisabled>
+				<textureradioondisabled colordiffuse="disabled">$PARAM[icon]</textureradioondisabled>
+				<label>$PARAM[label]</label>
+				<onclick>$PARAM[onclick_1]</onclick>
+				<onclick>$PARAM[onclick_2]</onclick>
+				<visible>$PARAM[visible]</visible>
+				<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+			</control>
+		</definition>
+	</include>
 	<include name="InfoDialogToggleButton">
 		<param name="width">262</param>
 		<definition>
