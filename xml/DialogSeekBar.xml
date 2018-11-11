@@ -304,7 +304,15 @@
 				<height>25</height>
 				<font>font14</font>
 				<label>[COLOR text_highlight]$LOCALIZE[19031]:[/COLOR] $INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime]: $INFO[VideoPlayer.NextTitle]</label>
-				<visible>VideoPlayer.HasEpg</visible>
+				<visible>VideoPlayer.HasEpg + !RDS.HasRadioText</visible>
+			</control>
+			<control type="label">
+				<left>260</left>
+				<top>180</top>
+				<height>25</height>
+				<font>font14</font>
+				<label>[COLOR text_highlight]$LOCALIZE[14304]: [/COLOR]$INFO[RDS.GetLine(0)]</label>
+				<visible>RDS.HasRadioText</visible>
 			</control>
 		</control>
  
