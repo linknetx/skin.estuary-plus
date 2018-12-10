@@ -447,12 +447,7 @@
 		<value condition="!String.IsEmpty(ListItem.AddonNews)">$LOCALIZE[31136]</value>
 	</variable>
 	<variable name="TimersSubLabel">
-		<value condition="[Window.IsActive(tvtimers) | Window.IsActive(radiotimers)] + !ListItem.HasTimer">$INFO[ListItem.Timertype]</value>
-		<value>$INFO[ListItem.EpisodeName]</value>
-	</variable>
-	<variable name="TimerRulesSubLabel">
-		<value condition="[Window.IsActive(tvtimerrules) | Window.IsActive(radiotimerrules)] + !ListItem.HasTimerSchedule">$INFO[ListItem.Timertype]</value>
-		<value>$INFO[ListItem.EpisodeName]</value>
+		<value>$INFO[ListItem.Timertype]</value>
 	</variable>
 	<variable name="BackgroundOverlayTypeVar">
 		<value condition="String.IsEqual(Skin.String(background_overlay),0)">$LOCALIZE[231]</value>
