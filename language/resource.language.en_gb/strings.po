@@ -769,5 +769,11 @@ msgstr ""
 #. Label of a setting
 #: /xml/SkinSettings.xml
 msgctxt "#31200"
-msgid "Show Live TV timeshift information"
+msgid "Show live TV timeshift information"
+msgstr ""
+
+#. Label of a setting
+#: /xml/SkinSettings.xml
+msgctxt "#31201"
+msgid "Show episode information in listings of recordings and timer rules"
 msgstr ""

@@ -79,6 +79,12 @@
 					<selected>Skin.HasSetting(ShowTimeshiftInformation)</selected>
 					<onclick>Skin.ToggleSetting(ShowTimeshiftInformation)</onclick>
 				</control>
+				<control type="radiobutton" id="709">
+					<label>$LOCALIZE[31201]</label>
+					<include>DefaultSettingButton</include>
+					<selected>Skin.HasSetting(ShowEpisodeInformation)</selected>
+					<onclick>Skin.ToggleSetting(ShowEpisodeInformation)</onclick>
+				</control>
 			</control>
 			<control type="grouplist" id="600">
 				<top>160</top>
