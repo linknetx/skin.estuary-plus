@@ -41,7 +41,7 @@
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>64</top>
+							<top>68</top>
 							<width>50</width>
 							<height>12</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
@@ -72,13 +72,13 @@
 							<height>90</height>
 							<right>130</right>
 							<aligny>top</aligny>
-							<font>font13</font>
+							<font>font14</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<control type="label">
 							<left>12</left>
-							<top>0</top>
+							<top>2</top>
 							<height>90</height>
 							<width>75</width>
 							<align>center</align>
@@ -99,7 +99,7 @@
 						</control>
 						<control type="progress">
 							<left>105</left>
-							<top>64</top>
+							<top>68</top>
 							<width>50</width>
 							<height>12</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
@@ -130,14 +130,14 @@
 							<height>90</height>
 							<right>130</right>
 							<aligny>top</aligny>
-							<font>font13</font>
+							<font>font14</font>
 							<label>$INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 							<textcolor>grey</textcolor>
 						</control>
 						<control type="label">
 							<left>12</left>
-							<top>0</top>
+							<top>2</top>
 							<height>90</height>
 							<width>75</width>
 							<align>center</align>
