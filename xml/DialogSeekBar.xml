@@ -45,7 +45,7 @@
 					<width>400</width>
 					<height>50</height>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<label>[COLOR text_highlight]$LOCALIZE[21396]:[CR][/COLOR]$INFO[player.chapter]$INFO[player.chaptercount, / ]</label>
 					<visible>player.chaptercount</visible>
@@ -119,7 +119,7 @@
 					<height>50</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<label>$INFO[Player.TimeRemaining,[COLOR text_highlight]$LOCALIZE[31134]:[CR][/COLOR]]</label>
@@ -132,7 +132,7 @@
 					<height>50</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font30</font>
+					<font>font13</font>
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="fade" time="200">VisibleChange</animation>
 					<label>$INFO[PVR.EpgEventRemainingTime,[COLOR text_highlight]$LOCALIZE[31134]:[CR][/COLOR]]</label>

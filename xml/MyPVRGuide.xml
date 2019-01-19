@@ -20,7 +20,7 @@
 						<left>0</left>
 						<top>-10</top>
 						<width>100%</width>
-						<bottom>280</bottom>
+						<bottom>282</bottom>
 						<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
 					</control>
 					<control type="group">
