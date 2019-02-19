@@ -461,6 +461,8 @@
 		<value>$LOCALIZE[20046]</value>
 	</variable>
 	<variable name="ChannelListEPGIconVar">
+		<value condition="String.IsEqual(ListItem.Icon,DefaultVideo.png)">DefaultTVShows.png</value>
+		<value condition="String.IsEqual(ListItem.Icon,DefaultVideoDeleted.png)">DefaultTVShowsDeleted.png</value>
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
