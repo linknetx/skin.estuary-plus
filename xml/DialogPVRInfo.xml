@@ -61,7 +61,7 @@
 					<itemgap>10</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>
-					<defaultcontrol>5</defaultcontrol>
+					<defaultcontrol always="true">5</defaultcontrol>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<onup>61</onup>
