@@ -37,7 +37,7 @@
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
-								<top>10</top>
+								<top>5</top>
 								<right>30</right>
 								<height>30</height>
 								<aligny>top</aligny>
@@ -56,7 +56,7 @@
 							</control>
 							<control type="label">
 								<right>20</right>
-								<top>13</top>
+								<top>12</top>
 								<width>900</width>
 								<height>70</height>
 								<font>font12</font>
@@ -99,7 +99,7 @@
 							<visible>!String.IsEmpty(ListItem.Date)</visible>
 							<control type="label">
 								<left>30</left>
-								<top>10</top>
+								<top>5</top>
 								<right>30</right>
 								<height>100</height>
 								<aligny>top</aligny>
@@ -117,7 +117,7 @@
 							</control>
 							<control type="label">
 								<right>20</right>
-								<top>13</top>
+								<top>12</top>
 								<width>900</width>
 								<height>70</height>
 								<font>font12</font>
