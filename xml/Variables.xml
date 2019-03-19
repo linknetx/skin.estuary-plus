@@ -271,14 +271,14 @@
 	<variable name="NowPlayingBreadcrumbsVar">
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes) + !String.IsEmpty(Player.Art(tvshow.clearlogo))">$INFO[VideoPlayer.Season,[COLOR text_highlight]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR text_highlight]E,: [/COLOR]]$INFO[VideoPlayer.Title]</value>
-		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, ([COLOR text_highlight],[/COLOR])]</value>
+		<value condition="Window.IsActive(fullscreenvideo)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year, ([COLOR text_highlight],[/COLOR])]</value>
 		<value condition="MusicPartyMode.Enabled">$LOCALIZE[589]</value>
 		<value>$LOCALIZE[31000]...</value>
 	</variable>
 	<variable name="OSDSubLabelVar">
 		<value condition="Window.IsActive(visualisation) + Integer.IsGreater(Playlist.Length,1) + Integer.IsGreater(Playlist.Position,0)">$LOCALIZE[554] $INFO[Playlist.Position] / $INFO[Playlist.Length]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</value>
-		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,[COLOR text_highlight]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR text_highlight]E,: [/COLOR]]$INFO[VideoPlayer.TVShowTitle]</value>
+		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,[COLOR text_highlight]S,[/COLOR]]$INFO[VideoPlayer.Episode,[COLOR text_highlight]E,: [/COLOR]]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(LiveTV) | PVR.IsPlayingRecording | PVR.IsPlayingEpgTag">$INFO[VideoPlayer.ChannelNumberLabel,([B][COLOR=text_highlight],[/B][/COLOR]) ]$INFO[VideoPlayer.ChannelName] $INFO[VideoPlayer.EpisodeName, - ]</value>
 		<value>$INFO[VideoPlayer.Genre]</value>
 	</variable>
@@ -466,5 +466,13 @@
 		<value condition="String.IsEqual(ListItem.Icon,DefaultVideoDeleted.png)">DefaultTVShowsDeleted.png</value>
 		<value condition="!String.IsEmpty(Listitem.EpgEventIcon)">$INFO[ListItem.EpgEventIcon]</value>
 		<value>$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="TimersComment">
+		<value condition="String.Contains(ListItem.Date,1970)">0 scheduled</value>
+		<value>$INFO[ListItem.Comment]</value>
+	</variable>
+	<variable name="TimersDate">
+		<value condition="String.Contains(ListItem.Date,1970)">No matching events found</value>
+		<value>$INFO[ListItem.Date]</value>
 	</variable>
 </includes>
