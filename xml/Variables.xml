@@ -469,11 +469,12 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="TimersComment">
-		<value condition="String.Contains(ListItem.Date,1970)">0 scheduled</value>
+		<value condition="String.StartsWith(System.Language,English) + String.Contains(ListItem.Date,1970)">0 scheduled</value>
 		<value>$INFO[ListItem.Comment]</value>
 	</variable>
 	<variable name="TimersDate">
-		<value condition="String.Contains(ListItem.Date,1970)">No matching events found</value>
+		<value condition="String.StartsWith(System.Language,English) + String.Contains(ListItem.Date,1970)">No matching events found</value>
+		<value condition="!String.StartsWith(System.Language,English) + String.Contains(ListItem.Date,1970)">$LOCALIZE[284]</value>
 		<value>$INFO[ListItem.Date]</value>
 	</variable>
 </includes>

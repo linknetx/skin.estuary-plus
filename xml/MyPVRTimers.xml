@@ -62,7 +62,7 @@
 								<font>font12</font>
 								<align>right</align>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.Comment]</label>
+								<label>$VAR[TimersComment]</label>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -72,7 +72,7 @@
 								<font>font12</font>
 								<align>right</align>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.Date]</label>
+								<label>$VAR[TimersDate]</label>
 							</control>
 						</control>
 					</itemlayout>
@@ -123,7 +123,7 @@
 								<font>font12</font>
 								<align>right</align>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.Comment]</label>
+								<label>$VAR[TimersComment]</label>
 							</control>
 							<control type="label">
 								<right>20</right>
@@ -133,7 +133,7 @@
 								<font>font12</font>
 								<align>right</align>
 								<aligny>top</aligny>
-								<label>$INFO[ListItem.Date]</label>
+								<label>$VAR[TimersDate]</label>
 							</control>
 						</control>
 					</focusedlayout>
