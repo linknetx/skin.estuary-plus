@@ -518,8 +518,8 @@
 				<top>$PARAM[scrollbar_top]</top>
 				<width>12</width>
 				<bottom>$PARAM[control_bottom]</bottom>
-				<onleft>10</onleft>
-				<onright>10</onright>
+				<onleft>$PARAM[control_id]</onleft>
+				<onright>$PARAM[control_id]</onright>
 				<orientation>vertical</orientation>
 				<texturesliderbackground colordiffuse="22FFFFFF">colors/white.png</texturesliderbackground>
 				<animation effect="fade" start="100" end="40" time="0" condition="!system.getbool(input.enablemouse)">Conditional</animation>
