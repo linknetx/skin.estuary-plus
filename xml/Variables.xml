@@ -122,8 +122,12 @@
 		<value condition="String.IsEqual(listitem.dbtype,musicvideo) | String.IsEqual(listitem.dbtype,video)">$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Plot]</value>
 		<value condition="String.IsEqual(listitem.dbtype,artist)">$INFO[ListItem.Property(artist_description)]</value>
 		<value condition="!String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="String.IsEqual(listitem.dbtype,song)">$INFO[listitem.TrackNumber,[COLOR text_highlight]$LOCALIZE[554]: [/COLOR]]. $INFO[ListItem.Title,,[CR]]$INFO[ListItem.Artist,[COLOR text_highlight]$LOCALIZE[557]: [/COLOR],[CR]]$INFO[listitem.Album,[COLOR text_highlight]$LOCALIZE[558]: [/COLOR],[CR]]$INFO[ListItem.DiscNumber,[COLOR text_highlight]$LOCALIZE[427]: [/COLOR],[CR]]$INFO[ListItem.Year,[COLOR text_highlight]$LOCALIZE[345]: [/COLOR],[CR]]$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR text_highlight]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR text_highlight]$LOCALIZE[567]: [/COLOR],[CR]]</value>
+		<value condition="String.IsEqual(listitem.dbtype,song)">$VAR[MusicTrackInfo,[COLOR text_highlight]$LOCALIZE[554]:[/COLOR],[CR]]$INFO[ListItem.Artist,[COLOR text_highlight]$LOCALIZE[557]: [/COLOR],[CR]]$INFO[listitem.Album,[COLOR text_highlight]$LOCALIZE[558]: [/COLOR],[CR]]$INFO[ListItem.DiscNumber,[COLOR text_highlight]$LOCALIZE[427]: [/COLOR],[CR]]$INFO[ListItem.Year,[COLOR text_highlight]$LOCALIZE[345]: [/COLOR],[CR]]$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]: [/COLOR],[CR]]$INFO[ListItem.Duration,[COLOR text_highlight]$LOCALIZE[180]: [/COLOR],[CR]]$INFO[ListItem.Playcount,[COLOR text_highlight]$LOCALIZE[567]: [/COLOR],[CR]]</value>
 		<value>$INFO[ListItem.Genre,[COLOR text_highlight]$LOCALIZE[515]: [/COLOR],[CR]]</value>
+	</variable>
+	<variable name="MusicTrackInfo">
+		<value condition="String.IsEmpty(listitem.Title)">$INFO[listitem.TrackNumber, ]</value>
+		<value>$INFO[listitem.TrackNumber, ,.]$INFO[listitem.Title, ]</value>
 	</variable>
 	<variable name="WidgetGenreIconVar">
 		<value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.transparent/,.png]</value>
