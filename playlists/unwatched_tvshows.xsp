@@ -8,6 +8,7 @@
     <rule field="numepisodes" operator="greaterthan">
         <value>0</value>
     </rule>
+    <rule field="inprogress" operator="false" />
     <limit>15</limit>
     <order direction="ascending">random</order>
 </smartplaylist>
