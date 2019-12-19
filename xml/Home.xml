@@ -75,7 +75,7 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5300"/>
 						</include>
-						<include content="WidgetListPoster" condition="Library.HasContent(movies)">
+						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !String.IsEqual(System.FriendlyName,EstuaryPlusVersion)">
 							<param name="content_path" value="special://skin/playlists/recent_unwatched_movies.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[20386]"/>
 							<param name="widget_target" value="videos"/>
@@ -128,9 +128,15 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6100"/>
 						</include>
-						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows)">
+						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows) + String.IsEqual(System.FriendlyName,EstuaryPlusVersion)">
 							<param name="content_path" value="special://skin/playlists/random_tvshow_episodes.xsp"/>
 							<param name="widget_header" value="$LOCALIZE[31202]"/>
+							<param name="widget_target" value="videos"/>
+							<param name="list_id" value="6200"/>
+						</include>
+						<include content="WidgetListEpisodes" condition="Library.HasContent(tvshows) + !String.IsEqual(System.FriendlyName,EstuaryPlusVersion)">
+							<param name="content_path" value="special://skin/playlists/recent_unwatched_episodes.xsp"/>
+							<param name="widget_header" value="$LOCALIZE[20387]"/>
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="6200"/>
 						</include>

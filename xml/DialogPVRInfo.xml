@@ -99,7 +99,7 @@
 						<param name="id" value="4" />
 						<param name="icon" value="icons/infodialogs/similar.png" />
 						<param name="label" value="$LOCALIZE[19003]" />
-						<param name="visible" value="Window.IsActive(PVRGuideInfo) | [Window.IsActive(PVRRecordingInfo) + String.IsEqual(System.FriendlyName,EstuaryPlusSkin)]" />
+						<param name="visible" value="Window.IsActive(PVRGuideInfo) | [Window.IsActive(PVRRecordingInfo) + String.IsEqual(System.FriendlyName,EstuaryPlusVersion)]" />
 					</include>
 					<include content="PVRinfoDialogButton">
 						<param name="id" value="440" />
